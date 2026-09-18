@@ -1,0 +1,22 @@
+{
+  "model_id": "claude-sonnet-4-6",
+  "provider": "anthropic",
+  "prompt_version": "NEXT_TURN_V1",
+  "instructions": "You are participating in a simulated clinical consultation.\n\nGiven the conversation so far, produce the single next clinician turn that would naturally follow at this point.\n\nRespond only with the next clinician utterance.",
+  "prompt_template": "You are participating in a simulated clinical consultation.\n\nGiven the conversation so far, produce the single next clinician turn that would naturally follow at this point.\n\nRespond only with the next clinician utterance.\n\nCONVERSATION:\n\n{context}",
+  "generation_settings": {
+    "temperature": 0.0,
+    "reasoning_setting": "disabled",
+    "max_output_tokens": 150,
+    "tools": null,
+    "web_search": false,
+    "retrieval": false,
+    "function_calling": false,
+    "text_output_only": true
+  },
+  "parameter_notes": [],
+  "output_token_limit": 150,
+  "run_date_utc": "2026-08-17",
+  "input_dataset_filename": "final_1500_TRULY_FROZEN.csv",
+  "context_count": 1500
+}

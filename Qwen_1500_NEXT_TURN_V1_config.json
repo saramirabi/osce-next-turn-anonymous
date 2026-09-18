@@ -1,0 +1,27 @@
+{
+  "model_id": "qwen/qwen3.6-35b-a3b",
+  "provider": "lmstudio",
+  "base_url": "http://127.0.0.1:1234/v1",
+  "prompt_version": "NEXT_TURN_V1",
+  "instructions": "You are participating in a simulated clinical consultation.\n\nGiven the conversation so far, produce the single next clinician turn that would naturally follow at this point.\n\nRespond only with the next clinician utterance.",
+  "prompt_template": "You are participating in a simulated clinical consultation.\n\nGiven the conversation so far, produce the single next clinician turn that would naturally follow at this point.\n\nRespond only with the next clinician utterance.\n\nCONVERSATION:\n\n{context}",
+  "generation_settings": {
+    "temperature": 0.0,
+    "reasoning_setting": "empty <think></think> assistant prefill (LM Studio ignores enable_thinking=false; without it content is empty)",
+    "max_output_tokens": 300,
+    "tools": null,
+    "web_search": false,
+    "retrieval": false,
+    "function_calling": false,
+    "text_output_only": true
+  },
+  "parameter_notes": [
+    "LM Studio OpenAI-compatible chat.completions at http://127.0.0.1:1234/v1",
+    "Qwen3.6 spends max_tokens on reasoning_content unless thinking is closed; assistant prefill is an empty <think></think> block so content is the clinician utterance",
+    "System and user prompts are unchanged NEXT_TURN_V1"
+  ],
+  "output_token_limit": 300,
+  "run_date_utc": "2026-08-21",
+  "input_dataset_filename": "final_1500_TRULY_FROZEN.csv",
+  "context_count": 1500
+}
