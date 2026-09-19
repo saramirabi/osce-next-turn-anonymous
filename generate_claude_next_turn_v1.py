@@ -29,14 +29,16 @@ REQUESTED_TEMPERATURE = 0.0
 REASONING_SETTING = "disabled"
 
 INSTRUCTIONS = (
-    "You are participating in a simulated clinical consultation.\n\n"
-    "Given the conversation so far, produce the single next clinician turn that "
-    "would naturally follow at this point.\n\n"
-    "Respond only with the next clinician utterance."
+    "You are acting as the clinician in a simulated clinical consultation. "
+    "Given the complete conversation history provided below, generate the "
+    "single next clinician turn that would naturally follow from the current "
+    "dialogue state. Produce only the clinician's next utterance, without "
+    "additional explanation, commentary, role labels, or continuation of the "
+    "dialogue."
 )
 
-CONVERSATION_HEADER = "CONVERSATION:\n\n{context}"
-PROMPT_TEMPLATE = f"{INSTRUCTIONS}\n\n{CONVERSATION_HEADER}"
+CONVERSATION_HEADER = "CONVERSATION:{context}"
+PROMPT_TEMPLATE = f"{INSTRUCTIONS}\n{CONVERSATION_HEADER}"
 
 INPUT_SAMPLE = PROJECT_DIR / "final_1500_TRULY_FROZEN.csv"
 OUTPUT_CSV = PROJECT_DIR / "final_Claude_1500_NEXT_TURN_V1.csv"

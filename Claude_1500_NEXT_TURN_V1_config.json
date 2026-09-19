@@ -2,8 +2,8 @@
   "model_id": "claude-sonnet-4-6",
   "provider": "anthropic",
   "prompt_version": "NEXT_TURN_V1",
-  "instructions": "You are participating in a simulated clinical consultation.\n\nGiven the conversation so far, produce the single next clinician turn that would naturally follow at this point.\n\nRespond only with the next clinician utterance.",
-  "prompt_template": "You are participating in a simulated clinical consultation.\n\nGiven the conversation so far, produce the single next clinician turn that would naturally follow at this point.\n\nRespond only with the next clinician utterance.\n\nCONVERSATION:\n\n{context}",
+  "instructions": "You are acting as the clinician in a simulated clinical consultation. Given the complete conversation history provided below, generate the single next clinician turn that would naturally follow from the current dialogue state. Produce only the clinician's next utterance, without additional explanation, commentary, role labels, or continuation of the dialogue.",
+  "prompt_template": "You are acting as the clinician in a simulated clinical consultation. Given the complete conversation history provided below, generate the single next clinician turn that would naturally follow from the current dialogue state. Produce only the clinician's next utterance, without additional explanation, commentary, role labels, or continuation of the dialogue.\nCONVERSATION:{context}",
   "generation_settings": {
     "temperature": 0.0,
     "reasoning_setting": "disabled",
